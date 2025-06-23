@@ -16,7 +16,7 @@ int main() {
 
     string input;
     while (true) {
-        cout << "\nCommands: add, show, quit\n";
+        cout << "\nCommands: add, show, quit, delete\n";
         cout << "Enter Command: ";
         getline(cin, input);
 
@@ -39,7 +39,23 @@ int main() {
                 cout << task.id << ": " << task.description << endl;
             }
         }
-        else {
+	else if (input.substr(0,7) == "delete "){
+	    bool found = false;
+		string idPart = input.substr(7);
+       		int idToDelete = stoi(idPart);
+		for(size_t i=0;i<tasks.size();i++){
+			if (tasks[i].id == idToDelete){
+				tasks.erase(tasks.begin() + i);
+				found = true;
+                cout<<"task deleted successfully"<<endl;
+			break;
+			}
+		}
+		if (!found)
+				cout<<"task not found"<<endl;
+	}
+			
+	else {
             cout << "Unknown Command.\n";
         }
     }
