@@ -34,10 +34,14 @@ int main() {
             cout << "Task added!\n";
         }
         else if (input == "show") {
-            cout << "Your tasks:\n";
-            for (const auto& task : tasks) {
-                cout << task.id << ": " << task.description << endl;
+            if(tasks.empty()==true){
+                cout << "list is empty ; add new tasks to be shown";
             }
+            else
+                cout << "Your tasks:\n";
+                    for (const auto& task : tasks) {
+                        cout << task.id << ": " << task.description << endl;
+                    }
         }
 	else if (input.substr(0,7) == "delete "){
 	    bool found = false;
