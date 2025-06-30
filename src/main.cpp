@@ -34,7 +34,7 @@ int main() {
             cout << "Task added!\n";
         }
         else if (input == "show") {
-            if(tasks.empty()==true){
+            if(tasks.empty()){
                 cout << "list is empty ; add new tasks to be shown";
             }
             else
@@ -52,8 +52,12 @@ int main() {
 				tasks.erase(tasks.begin() + i);
 				found = true;
                 cout<<"task deleted successfully"<<endl;
-			break;
-			}
+			for(size_t i=0;i<tasks.size();i++){
+            tasks[i].id = i + 1;
+            }        
+            nextId = tasks.size() + 1;
+            break;
+        }
 		}
 		if (!found)
 				cout<<"task not found"<<endl;
