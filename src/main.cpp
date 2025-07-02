@@ -16,7 +16,7 @@ int main() {
 
     string input;
     while (true) {
-        cout << "\nCommands: add, show, quit, delete\n";
+        cout << "\nCommands: add, show, quit, delete <id>\n";
         cout << "Enter Command: ";
         getline(cin, input);
 
@@ -52,8 +52,8 @@ int main() {
 				tasks.erase(tasks.begin() + i);
 				found = true;
                 cout<<"task deleted successfully"<<endl;
-			for(size_t i=0;i<tasks.size();i++){
-            tasks[i].id = i + 1;
+			for(size_t j=i;j<tasks.size();j++){
+            tasks[j].id = j + 1;
             }        
             nextId = tasks.size() + 1;
             break;
