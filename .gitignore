@@ -1,1 +1,13 @@
+# Ignore editor backup files
+*~swp
+# Ignore temporary files    
+*.tmp
+# Ignore build artifacts
 tasks.text
+# Ignore compiled binaries
+bin/
+*.out
+*.exe
+main
+main2
+todo
