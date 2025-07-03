@@ -19,7 +19,10 @@ This app allows you to:
 Ensure you have a C++ compiler installed (like `g++`), then:
 
 ```bash
-g++ src/main.cpp -o bin/todo
+g++ src/todo.cpp -o bin/todo #assuems you have a bin directory 
+or
+run
+./compiler.sh todo.cpp #I prefer to run this instead, creates the bin directory for you if it does not exist
 ````
 
 ---
@@ -30,7 +33,7 @@ g++ src/main.cpp -o bin/todo
 ./bin/todo
 ```
 
-You’ll see a prompt like this:
+You'll see a prompt like this:
 
 ```
 Commands: add, show, quit, delete <id>

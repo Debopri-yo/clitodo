@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Usage: ./compiler.sh src/main.cpp
+mkdir -p bin
 
 file="$1"
 
@@ -12,7 +13,6 @@ fi
 filename=$(basename -- "$file")
 name="${filename%.cpp}"
 
-mkdir -p bin
 
 echo "📦 Compiling $file → bin/$name..."
 
