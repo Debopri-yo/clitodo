@@ -4,7 +4,7 @@
 ````markdown
 # CLI Todo App in C++
 
-A simple command-line todo list manager built in C++ with file persistence.
+A simple command-line todo list manager built in C++ with file persistence (created on Linux).
 
 This app allows you to:
 - Add tasks with unique IDs
