@@ -4,10 +4,7 @@
 *.tmp
 # Ignore build artifacts
 tasks.text
-# Ignore compiled binaries
-bin/
-*.out
-*.exe
-main
-main2
-todo
+# Ignore all files in bin/
+bin/*
+# Ignore all files in bin/ except for .gitkeep
+!bin/.gitkeep    
